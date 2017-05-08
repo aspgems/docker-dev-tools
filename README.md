@@ -4,12 +4,7 @@ Dockerized tools for development. The tools in this container are:
 - openssl
 - git
 
-# Tools
-
-- [Creating self signed certificates](#self-signed-certificates)
-- [Using git](#git)
-
-## <a name="self-signed-certificates">Self signed certificates
+## Self signed certificates
 
 This was unshamesly borrowed from [https://codefresh.io/blog/using-docker-generate-ssl-certificates/](https://codefresh.io/blog/using-docker-generate-ssl-certificates/) :-)
 
@@ -22,7 +17,7 @@ docker run --rm -v $PWD:/work -it aspgems/dev-tools openssl req -out /work/CSR.c
 ```bash
 docker run -v $PWD:/work -it aspgems/dev-tools openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privatekey.key -out /work/certificate.crt
 ```
-## <a name="git"> Git
+## Git
 You can use this tool by running the following command fron the root of your application
 
 ```bash
